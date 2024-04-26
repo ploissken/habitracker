@@ -20,6 +20,8 @@ app.use(
   })
 );
 
+require("./webhooks")(app, db);
+
 app.listen(PORT, () => {
   console.info(`\x1b[1m\x1b[32m[server] listening on port ${PORT}\x1b[0m`);
 });
